@@ -1,0 +1,110 @@
+# 生成网站根目录的地址
+baseURL = "https://MaoPingZou.github.io/"
+
+# 主题
+theme = "hugo-theme-walden"
+
+# 列表分页基数
+paginate = 12
+
+# 多语言设置
+defaultContentLanguage = "en"
+
+[language]
+    [languages.en]
+        title = "MaoPing' Blog"
+        languageName = "English"
+        languageCode = "en-US"
+        weight = 1
+
+        # 用户参数
+        [languages.en.author]
+            name = "MaoPing"
+            avatar = "images/default/avatar.jpg"
+            description = "MaoPing"
+
+    [languages.zh]
+        title = "MaoPing's Blog"
+        languageName = "中文"
+        languageCode = "zh-Hans-CN"
+        weight = 2
+
+        [languages.zh.author]
+            name = "茂萍"
+            avatar = "images/default/avatar.jpg"
+            description = "茂萍"
+
+# 主菜单
+[languages.en.menus]
+    [[languages.en.menus.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = 10
+    [[languages.en.menus.main]]
+        identifier = "blog"
+        name = "Blog"
+        url = "/blog/"
+        weight = 20
+
+[languages.zh.menus]
+    [[languages.zh.menus.main]]
+        identifier = "home"
+        name = "首页"
+        url = "/zh/"
+        weight = 10
+    [[languages.zh.menus.main]]
+        identifier = "blog"
+        name = "博客"
+        url = "/zh/blog/"
+        weight = 20
+
+[params]
+    headline = "/images/default/headline.jpg"
+    thumbnail = "/images/default/thumbnail.jpg"
+    
+# 用于渲染的参数
+[markup]
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+            definitionList = true
+            footnote = true
+            linkify = true
+            strikethrough = true
+            table = true
+            taskList = true
+            typographer = true
+        [markup.goldmark.parser]
+            attribute = true
+            autoHeadingID = true
+            autoHeadingIDType = "github"
+        [markup.goldmark.renderer]
+            hardWraps = false
+            unsafe = true
+            xHTML = false
+    [markup.highlight]
+        codeFences = true
+        guessSyntax = true
+        hl_Lines = ""
+        lineNoStart = 1
+        lineNos = true
+        lineNumbersInTable = false
+        noClasses = true
+        style = "monokai"
+        tabWidth = 4
+    [markup.tableOfContents]
+        endLevel = 3
+        ordered = false
+        startLevel = 2
+
+
+# 用于 Hugo theme 发布的参数
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.101.0"
+
+
+
+
