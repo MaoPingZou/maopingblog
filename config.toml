@@ -1,5 +1,5 @@
 # 生成网站根目录的地址
-baseURL = "https://MaoPingZou.github.io/"
+baseURL = "https://MaoPingZou.github.io/docs/"
 
 # 主题
 theme = "hugo-theme-walden"
